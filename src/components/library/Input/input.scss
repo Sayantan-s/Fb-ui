@@ -1,0 +1,11 @@
+.inputbase{
+    width: 100%;
+    input,textarea{
+        border: none;
+        width: 100%;
+        resize: none;
+        &:focus{
+            outline : none;
+        }
+    }
+}

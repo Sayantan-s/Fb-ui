@@ -1,0 +1,11 @@
+@import '../../../sass/breakpoints.scss';
+
+.viewbase{
+    width: 100%;
+    background-color: red;
+}
+
+.isLayout{
+    max-width: $xs;
+    margin : 0 auto;
+}

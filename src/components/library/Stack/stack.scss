@@ -1,0 +1,19 @@
+.stack{
+    display: flex;
+    &_h{
+        flex-direction: row;
+        & > *{
+            &:not(:first-child){
+                margin-left: 0.5rem;
+            }
+        }
+    }
+    &_v{
+        flex-direction: column;
+        & > *{
+            &:not(:first-child){
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
