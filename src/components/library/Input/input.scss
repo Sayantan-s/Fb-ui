@@ -1,11 +1,22 @@
+@import '../../../sass/all.scss';
+
 .inputbase{
     width: 100%;
     input,textarea{
+        font-family: $font;
         border: none;
         width: 100%;
         resize: none;
+        color: $gray-9;
+        background-color: transparent;
+        &::placeholder{
+            color: $gray-5; 
+        } 
         &:focus{
             outline : none;
+            &::placeholder{
+                color: $gray-4;
+            }
         }
     }
 }

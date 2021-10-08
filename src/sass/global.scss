@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import 'utils.scss';
-@import 'breakpoints.scss';
+@import './utils.scss';
+@import './breakpoints.scss';
+@import './colors.scss';
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    html{
-        font-size : 62.5%;
-        body{
-            font-size: 1.6rem;
-            font-family: $font;
-        }
+}
+
+html{
+    font-size : 62.5%;
+    body{
+        font-size: 1.6rem;
+        font-family: $font;
     }
 }

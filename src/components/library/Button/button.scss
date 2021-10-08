@@ -1,4 +1,41 @@
+@import '../../../sass/all.scss';
+
 .btn{
+    font-family: $font;
     display: flex;
     align-items: center;
+    border: none;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-weight: 700;
+    .ml{
+        margin-left: 0.6rem;
+    }
+    .mr{
+        margin-left: 0.6rem;
+    }
+}
+
+.primary{
+    background-color: $blue-6;
+    color: $blue-0;
+    border-radius: 0.2rem;
+}
+
+.secondary{
+    background-color: $blue-1;
+    border-radius: 0.2rem;
+    &:hover{
+        background-color: darken($color: $blue-1, $amount: 2);
+    }
+}
+
+.transparent{
+    background-color: transparent;
+    color : $blue-6;
+    font-weight: 600;
+}
+
+.ml{
+    margin-left: 0.8rem;
 }

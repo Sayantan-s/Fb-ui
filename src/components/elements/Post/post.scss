@@ -1,0 +1,9 @@
+.post{
+    width: 100%;
+    &_imgwrapper{
+        &--img{
+            width: 100%;
+            height: 25rem;
+        }
+    }
+}

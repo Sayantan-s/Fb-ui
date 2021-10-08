@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react"
+import { useCallback, useEffect, useReducer } from "react"
 
 const initialState = {
     loading : false,
@@ -36,7 +36,7 @@ const reducer = (state, { type, payload }) => {
 const useFetch = ({ url = 'www.google.com', cb }) => {
     const [ state, dispatch ] = useReducer(reducer, initialState);
 
-    useEffect(() => {
+    const fetchMemoized = useCallback(() => {
         (async() => {
             dispatch({ type : 'LOADING' })
             try {
@@ -47,7 +47,12 @@ const useFetch = ({ url = 'www.google.com', cb }) => {
                 dispatch({ type : 'FETCH_UNSUCCESSFULL', payload : "Failed to fetch!" })
             }
         })()
-    },[])
+    },[url,cb])
+
+    useEffect(() => {
+        console.log("Hello")
+        fetchMemoized()
+    },[url])
 
     return state
 }

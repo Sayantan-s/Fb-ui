@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './sass/global.scss'
+import GifContext from './context/GifContext'
+import CreatePostContext from './context/CreatePostConext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CreatePostContext>
+      <GifContext>
+        <App />
+      </GifContext>
+    </CreatePostContext>
   </React.StrictMode>,
   document.getElementById('root')
 );
