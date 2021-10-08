@@ -39,7 +39,7 @@ const FindGiphy = () => {
 
     return (
        <View className="widget">
-            <Input type="text" placeholder="Write something here..." value={input} onChange={handleInput}/>
+            <Input type="text" placeholder="Search gif across the world..." value={input} onChange={handleInput} className="widget-input"/>
             <View className="widget_gifwrapper">
                 {
                     loading ? "loading...":

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import CreatePost from "./components/elements/CreatePost/CreatePost.component";
 import Post from "./components/elements/Post/Post.component";
 import Stack from "./components/library/Stack/Stack.component";
@@ -14,7 +14,7 @@ function App() {
       <CreatePost />
         {
           !!posts.length && (
-            <Stack direction="v">
+            <Stack direction="v" className="postcollection">
               {
                 posts.map((post, id) => (
                   <Post key={id} {...post} />

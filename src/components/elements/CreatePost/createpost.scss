@@ -3,7 +3,7 @@
 .createpost{
     box-shadow: 0px 5px 10px rgba($blue-2, $alpha: 0.5);
     background-color: lighten($color: $blue-0, $amount: 0.2);
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: 0.8rem;
     //border: 1px solid red;
     &_header{
@@ -29,7 +29,16 @@
             margin-right: 1rem;
         }
         &--input{
-            font-size: 2.3rem;
+            &-big{
+                input {
+                    font-size: 2.3rem; 
+                }
+            }
+            &-small{
+                input {
+                    font-size: 1.8rem; 
+                }
+            }
         }
     }
 

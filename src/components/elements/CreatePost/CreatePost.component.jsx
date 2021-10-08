@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import Avatar from '../../library/Avatar/Avatar.component'
 import Input from '../../library/Input/Input.component'
 import View from '../../library/View/View.component'
@@ -63,7 +63,7 @@ const CreatePost = () => {
               <View className="createpost_write--wrapper">
                 <Avatar src={"/images/avatar.webp"} alt="fb_user" />
               </View>
-              <Input type="text" placeholder="Write something here..." rows="4" value={input} onChange={handleInput} className="createpost_write--input"/>
+              <Input type="text" placeholder="Write something here..." rows="4" value={input} onChange={handleInput} className={`createpost_write--input-${gifContext.gifurl ? 'small' : 'big'}`}/>
           </View>
           <View className="createpost_emoji">
               <Emoji stroke="#acacae"/>

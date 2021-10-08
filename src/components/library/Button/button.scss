@@ -24,7 +24,8 @@
 
 .secondary{
     background-color: $blue-1;
-    border-radius: 0.2rem;
+    border-radius: 1.8rem;
+    padding: 1rem;
     &:hover{
         background-color: darken($color: $blue-1, $amount: 2);
     }

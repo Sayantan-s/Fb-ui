@@ -20,6 +20,14 @@
         left: 10px;
         z-index: 10000;
     }
+    &-input{
+        padding: 0.5rem;
+        input{
+            border: 1px solid $gray-2;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+    }
     &_gifwrapper{
         overflow-y: scroll;
         height: 35rem;
@@ -29,4 +37,16 @@
             cursor: pointer;
         }
     }
+    ::-webkit-scrollbar {
+        width: 3px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+       
+      ::-webkit-scrollbar-thumb {
+        background: $gray-3; 
+        border-radius: 10px;
+      }
 }
