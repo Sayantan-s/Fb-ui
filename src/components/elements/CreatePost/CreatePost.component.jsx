@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
-import { Avatar, Input, View, Button, Image, Stack } from 'library'
-/*import Avatar from '../../library/Avatar/Avatar.component';
+import Avatar from '../../library/Avatar/Avatar.component';
 import Input from '../../library/Input/Input.component';
-import View from '../../library/View/View.component';*/
+import View from '../../library/View/View.component';
 import './createpost.scss';
 import useInput from '../../../hooks/useInput';
-//import Button from '../../library/Button/Button.component';
+import Button from '../../library/Button/Button.component';
 import FindGiphy from '../FindGiphy/FindGiphy.component';
 import { GifURLContext } from '../../../context/GifContext';
-//import Image from '../../library/Image/Image.component';
+import Image from '../../library/Image/Image.component';
 import { PostContext } from '../../../context/CreatePostConext';
-//import Stack from '../../library/Stack/Stack.component';
+import Stack from '../../library/Stack/Stack.component';
 import Emoji from '../../icons/line/Emoji.line';
 import Chevronleft from '../../icons/line/Chevronleft.line';
 import Gif from '../../icons/solid/Gif.solid';
