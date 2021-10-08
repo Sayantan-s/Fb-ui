@@ -1,60 +1,61 @@
-import { useCallback, useEffect, useReducer } from "react"
+import { useCallback, useEffect, useReducer } from 'react';
 
 const initialState = {
-    loading : false,
-    data : null,
-    error : ''
-}
+    loading: false,
+    data: null,
+    error: ''
+};
 
 const reducer = (state, { type, payload }) => {
-    switch (type){
+    switch (type) {
         case 'LOADING':
             return {
                 ...state,
-                loading : true,
-                data : null,
-                error : ''
-            }
+                loading: true,
+                data: null,
+                error: ''
+            };
         case 'FETCH_SUCCESSFULL':
             return {
                 ...state,
-                loading : false,
-                data : payload,
-                error : ''
-            }
+                loading: false,
+                data: payload,
+                error: ''
+            };
         case 'FETCH_UNSUCCESSFULL':
             return {
                 ...state,
-                loading : false,
-                data : null,
-                error : payload
-            }
-        default: return state;
+                loading: false,
+                data: null,
+                error: payload
+            };
+        default:
+            return state;
     }
-}
+};
 
 const useFetch = ({ url = 'www.google.com', cb }) => {
-    const [ state, dispatch ] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
     const fetchMemoized = useCallback(() => {
-        (async() => {
-            dispatch({ type : 'LOADING' })
+        (async () => {
+            dispatch({ type: 'LOADING' });
             try {
-                const req = await (await fetch(url)).json()
+                const req = await (await fetch(url)).json();
                 const data = cb(req);
-                dispatch({ type : 'FETCH_SUCCESSFULL', payload : data })
+                dispatch({ type: 'FETCH_SUCCESSFULL', payload: data });
             } catch (error) {
-                dispatch({ type : 'FETCH_UNSUCCESSFULL', payload : "Failed to fetch!" })
+                dispatch({ type: 'FETCH_UNSUCCESSFULL', payload: 'Failed to fetch!' });
             }
-        })()
-    },[url,cb])
+        })();
+    }, [url, cb]);
 
     useEffect(() => {
-        console.log("Hello")
-        fetchMemoized()
-    },[url])
+        console.log('Hello');
+        fetchMemoized();
+    }, [url]);
 
-    return state
-}
+    return state;
+};
 
-export default useFetch
+export default useFetch;

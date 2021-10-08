@@ -2,19 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './sass/global.scss'
-import GifContext from './context/GifContext'
+import './sass/global.scss';
+import GifContext from './context/GifContext';
 import CreatePostContext from './context/CreatePostConext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CreatePostContext>
-      <GifContext>
-        <App />
-      </GifContext>
-    </CreatePostContext>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <CreatePostContext>
+            <GifContext>
+                <App />
+            </GifContext>
+        </CreatePostContext>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

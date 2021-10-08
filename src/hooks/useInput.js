@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 const useInput = ({ initialState = '' }) => {
-    const [input, setInput] = useState(initialState)
-    
-    return [input, eve => setInput(eve.target.value), setInput];
-}
+    const [input, setInput] = useState(initialState);
 
-export default useInput
+    return [input, (eve) => setInput(eve.target.value), setInput];
+};
+
+export default useInput;

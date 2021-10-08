@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "baseUrl": "./src",
+        "paths": {
+            "components": ["./components"],
+            "icons": ["./components/icons"],
+            "library": ["./components/library"],
+            "context": ["./context"],
+            "hooks": ["./hooks"]
+        }
+    },
+    "exclude": ["node_modules"]
+}

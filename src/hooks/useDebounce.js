@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 const useDebounce = () => {
-    const [ queryTimeout, setQueryTimeOut ] = useState("");
+    const [queryTimeout, setQueryTimeOut] = useState('');
 
     const debounce = (callback, wait = 1000) => {
         clearTimeout(queryTimeout);
@@ -9,9 +9,9 @@ const useDebounce = () => {
         const timeout = setTimeout(() => callback(), wait);
 
         setQueryTimeOut(timeout);
-    }
+    };
 
     return debounce;
-}
+};
 
-export default useDebounce 
+export default useDebounce;

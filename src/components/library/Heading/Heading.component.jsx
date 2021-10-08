@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Heading = ({level, as: Component = `h${level}`, ...rest}) => {
-    return (
-      <Component {...rest} />
-    )
-}
+const Heading = ({ level, as: Component = `h${level}`, ...rest }) => {
+    return <Component {...rest} />;
+};
 
-export default Heading
+export default Heading;
