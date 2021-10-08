@@ -2,7 +2,7 @@
 ```
 npm i
 ```
-# Api-Key
+# Giphy Api-Key
 ```
 9jtsTxgs6gXcfI2wAtjdlGYIEXMtm3l9
 ```
